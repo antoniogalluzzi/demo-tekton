@@ -1,5 +1,5 @@
 # build
-FROM maven:3.9.6-eclipse-temurin-11 AS build
+FROM docker.io/library/maven:3.9.6-eclipse-temurin-11 AS build
 WORKDIR /workspace
 COPY pom.xml .
 RUN mvn -q -e -B -DskipTests dependency:go-offline

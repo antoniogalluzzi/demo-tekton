@@ -1,0 +1,8 @@
+@'
+target/
+.idea/
+*.iml
+*.log
+.DS_Store
+.mvn/wrapper/maven-wrapper.jar
+'@ | Out-File -Encoding utf8 .gitignore

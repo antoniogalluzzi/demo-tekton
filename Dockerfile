@@ -7,7 +7,7 @@ COPY src ./src
 RUN mvn -q -e -B -DskipTests package
 
 # run (JRE 11)
-FROM eclipse-temurin:11-jre
+FROM docker.io/library/eclipse-temurin:11-jre
 ENV JAVA_OPTS=""
 WORKDIR /app
 COPY --from=build /workspace/target/*.jar app.jar
